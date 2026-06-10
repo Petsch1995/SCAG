@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroVolt - Calculadora de Energia Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AgroVolt ⚡</h1>
+        <p>Simulador de Viabilidade Solar para o Agronegócio Sustentável</p>
+    </header>
+
+    <main>
+        <section class="card-calculadora">
+            <h2>Simule sua Economia Rural</h2>
+            <p>Descubra o potencial da energia solar para a sua propriedade agrícola.</p>
+            
+            <form id="formulario-agro">
+                <div class="grupo-input">
+                    <label for="gasto-energia">Gasto mensal com energia elétrica (R$):</label>
+                    <input type="number" id="gasto-energia" placeholder="Ex: 1500" required min="0">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="area-disponivel">Área disponível para painéis (m²):</label>
+                    <input type="number" id="area-disponivel" placeholder="Ex: 50" required min="0">
+                </div>
+
+                <button type="button" id="btn-calcular">Calcular Viabilidade</button>
+            </form>
+        </section>
+
+        <section id="zona-resultado" class="card-resultado oculto">
+            <h3>Resultado da Análise</h3>
+            <div id="resultado-texto"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto Desenvolvido para o Concurso Agrinho 30 Anos • Inovação e Sustentabilidade</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

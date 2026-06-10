@@ -1,0 +1,127 @@
+/* Reset Global e Consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Central de Variáveis de Cores (Identidade Agro) */
+:root {
+    --verde-principal: #2E7D32;
+    --laranja-alerta: #EF6C00;
+    --cinza-fundo: #F4F6F4;
+    --texto-escuro: #212121;
+    --branco: #FFFFFF;
+}
+
+body {
+    background-color: var(--cinza-fundo);
+    color: var(--texto-escuro);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+main {
+    flex: 1;
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card-calculadora, .card-resultado {
+    background-color: var(--branco);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+h2, h3 {
+    color: var(--verde-principal);
+    margin-bottom: 1rem;
+}
+
+.grupo-input {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #E0E0E0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--verde-principal);
+}
+
+button {
+    width: 100%;
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1B5E20;
+}
+
+/* Classes Dinâmicas via JS */
+.oculto {
+    display: none;
+}
+
+.erro {
+    color: var(--laranja-alerta);
+    font-weight: bold;
+    border-left: 4px solid var(--laranja-alerta);
+    padding-left: 0.5rem;
+}
+
+.sucesso-destaque {
+    font-size: 1.3rem;
+    color: var(--verde-principal);
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #1A331E;
+    color: #A5D6A7;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
